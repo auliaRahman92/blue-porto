@@ -209,6 +209,12 @@
 </body>
 <!-- coba update github -->
 <script>
+  function refresh(){
+    alert("form berhasil dikirim");
+    setTimeout(function() {
+        location.reload();
+    }, 1000); // 1 seconds delay
+}
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxQNekUGHN6JuK3nE7xKTHftX2CsETYR48BvcAvKms8qg17trLBE2U3pk-VHioQO64o/exec'
   const form = document.forms['contact-form']
 
