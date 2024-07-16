@@ -166,7 +166,7 @@
       <div class="row justify-content-center">
         <div class="col-6">
 
-          <form name="contact-form">
+          <form name="contact-form" id="contact-form">
             <div class="mb-3">
               <label for="username" class="form-label">Nama lengkap</label>
               <input type="text" class="form-control" id="username" aria-describedby="username" name="name">
@@ -209,12 +209,14 @@
 </body>
 <!-- coba update github -->
 <script>
+  let formHtml = document.getElementById("contact-form")
   function refresh(){
     alert("form berhasil dikirim");
-    setTimeout(function() {
-        location.reload();
-    }, 1000); // 1 seconds delay
-}
+    setTimeout(function(){
+      formHtml.reset();  // Reset form after successful submission
+    }, 3000)
+
+  }
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxQNekUGHN6JuK3nE7xKTHftX2CsETYR48BvcAvKms8qg17trLBE2U3pk-VHioQO64o/exec'
   const form = document.forms['contact-form']
 
